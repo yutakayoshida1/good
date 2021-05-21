@@ -1,0 +1,1 @@
+米国市民権<?php /**PATH /Applications/MAMP/htdocs/GoodEnough3/resources/views/registerlayout/us_citizen.blade.php ENDPATH**/ ?>

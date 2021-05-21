@@ -1,0 +1,1 @@
+住居設定<?php /**PATH /home/r9920488/public_html/goodenoughtreasure.com/resources/views/registerlayout/personal_place.blade.php ENDPATH**/ ?>

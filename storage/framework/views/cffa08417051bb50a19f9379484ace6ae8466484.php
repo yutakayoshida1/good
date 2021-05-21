@@ -1,0 +1,1 @@
+書類のアップロード<?php /**PATH /Applications/MAMP/htdocs/GoodEnough3/resources/views/registerlayout/finance_info.blade.php ENDPATH**/ ?>
