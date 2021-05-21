@@ -101,8 +101,8 @@
 <div class="row" style="margin-top:20px;">
 	<div class="col text-center py-4">
 
-		<form action="{{ url('sample/download2') }}" method="post">
-			@csrf
+		<form action="<?php echo e(url('sample/download2')); ?>" method="post">
+			<?php echo csrf_field(); ?>
 			<input type="hidden" name="login" value="test">
 			<input class="submit-btn" type="submit" value="ダウンロード" style="margin: 0;">
 		</form>
@@ -141,4 +141,4 @@
 		</table>
 	</div>
 </div>
-</div>
+</div><?php /**PATH E:\Gitub project\good\resources\views/personal/history_main.blade.php ENDPATH**/ ?>
