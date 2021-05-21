@@ -199,4 +199,4 @@
     <div class="col-md-10 mb-10">
         <input class="form-control form-md" type="text" name="primary_holder[email]" />
     </div>
-</div>
+</div><?php /**PATH E:\Gitub project\good\resources\views/registerlayout/personal_basic.blade.php ENDPATH**/ ?>

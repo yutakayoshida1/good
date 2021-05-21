@@ -14,16 +14,16 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
   <!-- 全体 -->
-  <link rel="stylesheet" href="{{asset('css/basic.css')}}">
-  <link rel="stylesheet" href="{{asset('css/header_and_footer.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('css/basic.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('css/header_and_footer.css')); ?>">
 
   <!-- 会員ページ全体 -->
-  <link rel="stylesheet" href="{{asset('css/left_profile.css')}}">
-  <link rel="stylesheet" href="{{asset('css/over_menu.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('css/left_profile.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('css/over_menu.css')); ?>">
 
   <!-- 本ページ -->
-  <link rel="stylesheet" href="{{asset('css/summary.css')}}">
-  <link rel="stylesheet" href="{{asset('css/summary_main.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('css/summary.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('css/summary_main.css')); ?>">
 
   <title>
     GOOD ENOUGH FX
@@ -52,7 +52,7 @@
       display: none;
     }
 
-    @media screen and (max-width: 525px) {
+    @media  screen and (max-width: 525px) {
       .red-div {
         margin-left: 0;
       }
@@ -66,7 +66,7 @@
 
 <body>
   <div class="main-wrap">
-    @include('layouts.header')
+    <?php echo $__env->make('layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 
     <div class="mypage-wrapper">
@@ -79,21 +79,21 @@
 
         <div class="col-md-9 col-lg-9 col-sm-9 col-xs-12 my-page-main-content">
           <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 d-flex-around">
-            <a href="{{url('/my-page')}}" class="mypage-menu">口座サマリー</a>
-            <a href="{{url('/my-history')}}" class="mypage-menu">履 歴</a>
-            <a href="{{url('/my-deposit')}}" class="mypage-menu">入出金</a>
+            <a href="<?php echo e(url('/my-page')); ?>" class="mypage-menu">口座サマリー</a>
+            <a href="<?php echo e(url('/my-history')); ?>" class="mypage-menu">履 歴</a>
+            <a href="<?php echo e(url('/my-deposit')); ?>" class="mypage-menu">入出金</a>
           </div>
 
           <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 d-flex-around">
-            <a href="{{url('/my-transfer')}}" class="mypage-menu">資金移動</a>
-            <a href="{{url('/my-additional')}}" class="mypage-menu mypage-menu-active">追加口座</a>
-            <a href="{{url('/my-setting')}}" class="mypage-menu">設 定</a>
+            <a href="<?php echo e(url('/my-transfer')); ?>" class="mypage-menu">資金移動</a>
+            <a href="<?php echo e(url('/my-additional')); ?>" class="mypage-menu mypage-menu-active">追加口座</a>
+            <a href="<?php echo e(url('/my-setting')); ?>" class="mypage-menu">設 定</a>
           </div>
         </div>
       </div>
       <div style="height: 1px; background: gray;  margin: 20px 0px;"></div>
       <div class="row">
-        @include('my_page.my-page-side-bar')
+        <?php echo $__env->make('my_page.my-page-side-bar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <div class="col-md-9 col-lg-9 col-sm-9 col-xs-12 my-page-main-content">
           <div class="mypage-detail-wrapper">
             <p class="title">
@@ -105,14 +105,14 @@
               <div class="row" style="margin-top:20px;">
                 <div class="col-xs-5 form-label">お名前（ローマ字）</div>
                 <div class="col-xs-7" style="line-height: 40px;">
-                  <input type="text" class="form-input" value="{{$this_user_account_info->name}}">
+                  <input type="text" class="form-input" value="<?php echo e($this_user_account_info->name); ?>">
                 </div>
               </div>
 
               <div class="row" style="margin-top:20px;">
                 <div class="col-xs-5 form-label">メールアドレス</div>
                 <div class="col-xs-7" style="line-height: 40px;">
-                  <input type="text" class="form-input" value="{{$this_user_account_info->email}}">
+                  <input type="text" class="form-input" value="<?php echo e($this_user_account_info->email); ?>">
                 </div>
               </div>
 
@@ -172,8 +172,8 @@
         </div>
       </div>
     </div>
-    @include('layouts.footer')
+    <?php echo $__env->make('layouts.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
   </div>
 </body>
 
-</html>
+</html><?php /**PATH E:\Gitub project\good\resources\views/my_page/additional.blade.php ENDPATH**/ ?>

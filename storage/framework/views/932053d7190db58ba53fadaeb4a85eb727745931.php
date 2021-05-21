@@ -14,16 +14,16 @@
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 	<!-- 全体 -->
-	<link rel="stylesheet" href="{{asset('css/basic.css')}}">
-	<link rel="stylesheet" href="{{asset('css/header_and_footer.css')}}">
+	<link rel="stylesheet" href="<?php echo e(asset('css/basic.css')); ?>">
+	<link rel="stylesheet" href="<?php echo e(asset('css/header_and_footer.css')); ?>">
 
 	<!-- 会員ページ全体 -->
-	<link rel="stylesheet" href="{{asset('css/left_profile.css')}}">
-	<link rel="stylesheet" href="{{asset('css/over_menu.css')}}">
+	<link rel="stylesheet" href="<?php echo e(asset('css/left_profile.css')); ?>">
+	<link rel="stylesheet" href="<?php echo e(asset('css/over_menu.css')); ?>">
 
 	<!-- 本ページ -->
-	<link rel="stylesheet" href="{{asset('css/summary.css')}}">
-	<link rel="stylesheet" href="{{asset('css/summary_main.css')}}">
+	<link rel="stylesheet" href="<?php echo e(asset('css/summary.css')); ?>">
+	<link rel="stylesheet" href="<?php echo e(asset('css/summary_main.css')); ?>">
 
 	<title>
 		GOOD ENOUGH FX
@@ -55,7 +55,7 @@
 		}
 		
 
-		@media screen and (max-width: 525px) {
+		@media  screen and (max-width: 525px) {
 			.col-md-12{
 				padding: 0;
 			}
@@ -67,7 +67,7 @@
 
 	<div class="main-wrap">
 
-		@include('layouts.header')
+		<?php echo $__env->make('layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 		<div class="container my-6">
 			<div class="col-12 my-5">
@@ -102,7 +102,7 @@
 					<div>
 						<a href="#faq5" class="btn-block" data-toggle="collapse">5. デモアカウントを提供していますか？</a>
 						<div id="faq5" class="collapse">
-							<p><br>はい、ここでデモアカウントにサインアップできます：<a href="{{route('demo')}}">デモ口座開設ページ<br></p>
+							<p><br>はい、ここでデモアカウントにサインアップできます：<a href="<?php echo e(route('demo')); ?>">デモ口座開設ページ<br></p>
 						</div>
 					</div>
 					<div>
@@ -158,16 +158,16 @@
 			<div class="col-md-12">
 				<div style="width: fit-content; margin:50px auto 30px auto;">
 				<!-- <a href="#" class="btn-custom">お問い合わせ</a> -->
-				<a href="{{route('inquiry')}}" class="btn btn-success">お問い合わせ</a>
+				<a href="<?php echo e(route('inquiry')); ?>" class="btn btn-success">お問い合わせ</a>
 				</div>
 			</div>
 		</div>
 
-		@include('layouts.footer')
+		<?php echo $__env->make('layouts.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 		<a href="javascript:void(0);" id="scroll-top" title="Scroll to Top" style="display: none; opacity: 0.5;">Top<span></span></a>
 
 	</div>
 </body>
 
-</html>
+</html><?php /**PATH E:\Gitub project\good\resources\views/terms/faq.blade.php ENDPATH**/ ?>

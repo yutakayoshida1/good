@@ -30,7 +30,6 @@ class MyPageController extends Controller
 
     public function history(Request $request) {
         if(!Auth::check()) return redirect(route('mt4login'));
-        
         $data = self::History2($request);
         
         return view('my_page.history')->with($data);
@@ -326,12 +325,12 @@ class MyPageController extends Controller
         // 共通部分表示に使用する情報
         $global = GlobalVariable::get_global_variable();
         $personal = PersonalPageVariable::get_personalpage_variable();
-        $historyInfo = self::getHistoryInfo($request);
+        // $historyInfo = self::getHistoryInfo($request);
 
         return [
             "global" => $global,
             "personal" => $personal,
-            "historyInfo" => $historyInfo,
+            // "historyInfo" => $historyInfo,
         ];
     }
 

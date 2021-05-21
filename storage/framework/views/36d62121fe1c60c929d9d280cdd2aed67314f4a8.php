@@ -14,16 +14,16 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
   <!-- 全体 -->
-  <link rel="stylesheet" href="{{asset('css/basic.css')}}">
-  <link rel="stylesheet" href="{{asset('css/header_and_footer.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('css/basic.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('css/header_and_footer.css')); ?>">
 
   <!-- 会員ページ全体 -->
-  <link rel="stylesheet" href="{{asset('css/left_profile.css')}}">
-  <link rel="stylesheet" href="{{asset('css/over_menu.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('css/left_profile.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('css/over_menu.css')); ?>">
 
   <!-- 本ページ -->
-  <link rel="stylesheet" href="{{asset('css/summary.css')}}">
-  <link rel="stylesheet" href="{{asset('css/summary_main.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('css/summary.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('css/summary_main.css')); ?>">
 
   <title>
     GOOD ENOUGH FX
@@ -69,7 +69,7 @@
       margin-bottom: 15px;
     }
 
-    @media screen and (max-width: 525px) {
+    @media  screen and (max-width: 525px) {
       input {
         height: 30px !important;
       }
@@ -109,7 +109,7 @@
 
 <body>
   <div class="main-wrap">
-    @include('layouts.header')
+    <?php echo $__env->make('layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 
     <div class="mypage-wrapper">
@@ -122,15 +122,15 @@
 
         <div class="col-md-9 col-lg-9 col-sm-9 col-xs-12  my-page-main-content">
           <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 d-flex-around">
-            <a href="{{url('/my-page')}}" class="mypage-menu">口座サマリー</a>
-            <a href="{{url('/my-history')}}" class="mypage-menu ">履 歴</a>
-            <a href="{{url('/my-deposit')}}" class="mypage-menu mypage-menu-active">入出金</a>
+            <a href="<?php echo e(url('/my-page')); ?>" class="mypage-menu">口座サマリー</a>
+            <a href="<?php echo e(url('/my-history')); ?>" class="mypage-menu ">履 歴</a>
+            <a href="<?php echo e(url('/my-deposit')); ?>" class="mypage-menu mypage-menu-active">入出金</a>
           </div>
 
           <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 d-flex-around">
-            <a href="{{url('/my-transfer')}}" class="mypage-menu">資金移動</a>
-            <a href="{{url('/my-additional')}}" class="mypage-menu">追加口座</a>
-            <a href="{{url('/my-setting')}}" class="mypage-menu">設 定</a>
+            <a href="<?php echo e(url('/my-transfer')); ?>" class="mypage-menu">資金移動</a>
+            <a href="<?php echo e(url('/my-additional')); ?>" class="mypage-menu">追加口座</a>
+            <a href="<?php echo e(url('/my-setting')); ?>" class="mypage-menu">設 定</a>
           </div>
         </div>
       </div>
@@ -138,20 +138,20 @@
       <div style="height: 1px; background: gray; margin: 20px 0px"></div>
 
       <div class="row">
-        @include('my_page.my-page-side-bar')
+        <?php echo $__env->make('my_page.my-page-side-bar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <div class="col-md-9 col-lg-9 col-sm-9 col-xs-12  my-page-main-content">
 
           <div class="deposit-menu-wrapper">
             <div class="col-md-2 col-lg-2 col-sm-4 col-xs-4 d-flex-around margin-top-zero">
-              <a href="{{url('/my-deposit')}}" class="mypage-menu deposit-menu">銀行入金</a>
+              <a href="<?php echo e(url('/my-deposit')); ?>" class="mypage-menu deposit-menu">銀行入金</a>
             </div>
 
             <div class="col-md-2 col-lg-2 col-sm-4 col-xs-4 d-flex-around margin-top-zero">
-              <a href="{{url('/my-deposit/cryptocurrency')}}" class="mypage-menu deposit-menu">暗号通貨入金</a>
+              <a href="<?php echo e(url('/my-deposit/cryptocurrency')); ?>" class="mypage-menu deposit-menu">暗号通貨入金</a>
             </div>
 
             <div class="col-md-2 col-lg-2 col-sm-4 col-xs-4 d-flex-around margin-top-zero">
-              <a href="{{url('/my-deposit/withdrawal')}}" class="mypage-menu deposit-menu  mypage-menu-active">出　金</a>
+              <a href="<?php echo e(url('/my-deposit/withdrawal')); ?>" class="mypage-menu deposit-menu  mypage-menu-active">出　金</a>
             </div>
           </div>
 
@@ -159,8 +159,8 @@
 
           <div class="deposit-menu-wrapper">
             <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12 d-flex-around margin-top-zero submenu-div">
-              <a href="{{url('/my-deposit/withdrawal')}}" class="mypage-menu deposit-menu  mypage-menu-active submenu">銀行入金</a>
-              <a href="{{url('/my-deposit/withdrawal/credit')}}" class="mypage-menu deposit-menu submenu">クレジット入金</a>
+              <a href="<?php echo e(url('/my-deposit/withdrawal')); ?>" class="mypage-menu deposit-menu  mypage-menu-active submenu">銀行入金</a>
+              <a href="<?php echo e(url('/my-deposit/withdrawal/credit')); ?>" class="mypage-menu deposit-menu submenu">クレジット入金</a>
             </div>
           </div>
 
@@ -168,8 +168,8 @@
 
           <div class="mypage-detail-wrapper">
 
-            <form method="POST" action="{{route('withdrawal-application2')}}" enctype="multipart/form-data" class="register_form" onSubmit="return IdAuth();" data-addbankaction="{{route('add-bank')}}" data-withdrawaction="{{route('withdrawal-application2')}}">
-              @csrf
+            <form method="POST" action="<?php echo e(route('withdrawal-application2')); ?>" enctype="multipart/form-data" class="register_form" onSubmit="return IdAuth();" data-addbankaction="<?php echo e(route('add-bank')); ?>" data-withdrawaction="<?php echo e(route('withdrawal-application2')); ?>">
+              <?php echo csrf_field(); ?>
               <input type="hidden" name="howdo" value="bank">
               <p class="title">
                 銀行出金
@@ -177,7 +177,7 @@
               <div class="my-page-form-group" style="margin: auto;">
                 <div class="row">
                   <div class="col-xs-5 form-label" style="font-weight: bold;">出金元口座番号</div>
-                  <div class="col-xs-7" style="height: 40px; line-height:40px; font-weight:bold;">{{$account_number}}</div>
+                  <div class="col-xs-7" style="height: 40px; line-height:40px; font-weight:bold;"><?php echo e($account_number); ?></div>
                 </div>
                 <div class="row">
                   <div class="col-xs-5 form-label" style="font-weight: bold;">出金申請金額</div>
@@ -189,11 +189,11 @@
               <p class="title">
                 送金先銀行情報
               </p>
-              @foreach($banks as $bank)
+              <?php $__currentLoopData = $banks; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $bank): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
               <div class="d-flex-center">
-                <input class="withdrawinput" type="radio" name="bankid" value="{{$bank->id}}" required> <span>{{$bank->bank_name}}　{{$bank->bank_branch}}　{{$bank->bank_kind}}　{{$bank->bank_account_number}} {{$bank->bank_account_name}}</span>
+                <input class="withdrawinput" type="radio" name="bankid" value="<?php echo e($bank->id); ?>" required> <span><?php echo e($bank->bank_name); ?>　<?php echo e($bank->bank_branch); ?>　<?php echo e($bank->bank_kind); ?>　<?php echo e($bank->bank_account_number); ?> <?php echo e($bank->bank_account_name); ?></span>
               </div>
-              @endforeach
+              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
               <a href="#" class="my-page-button my-page-button-green fixed-width" style="margin-top: 50px">登録銀行追加</a>
               <div class="border-gray">
 
@@ -288,7 +288,7 @@
         </div>
       </div>
     </div>
-    @include('layouts.footer')
+    <?php echo $__env->make('layouts.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
   </div>
 
   <script type="text/javascript">
@@ -297,7 +297,7 @@
 
       let isSamePassword = $.ajax({
         type: 'GET',
-        url: '{{route("judge")}}?password=' + input_id,
+        url: '<?php echo e(route("judge")); ?>?password=' + input_id,
         async: false
       }).responseText;
 
@@ -343,4 +343,4 @@
 
 </body>
 
-</html>
+</html><?php /**PATH E:\Gitub project\good\resources\views/my_page/deposit_withdrawal.blade.php ENDPATH**/ ?>

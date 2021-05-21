@@ -14,16 +14,16 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
   <!-- 全体 -->
-  <link rel="stylesheet" href="{{asset('css/basic.css')}}">
-  <link rel="stylesheet" href="{{asset('css/header_and_footer.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('css/basic.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('css/header_and_footer.css')); ?>">
 
   <!-- 会員ページ全体 -->
-  <link rel="stylesheet" href="{{asset('css/left_profile.css')}}">
-  <link rel="stylesheet" href="{{asset('css/over_menu.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('css/left_profile.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('css/over_menu.css')); ?>">
 
   <!-- 本ページ -->
-  <link rel="stylesheet" href="{{asset('css/summary.css')}}">
-  <link rel="stylesheet" href="{{asset('css/summary_main.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('css/summary.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('css/summary_main.css')); ?>">
 
   <title>
     GOOD ENOUGH FX
@@ -53,7 +53,7 @@
       border: 1px solid red;
     }
 
-    @media screen and (max-width: 525px) {
+    @media  screen and (max-width: 525px) {
       .mypage-detail-wrapper {
         padding: 0;
       }
@@ -73,7 +73,7 @@
 
 <body>
   <div class="main-wrap">
-    @include('layouts.header')
+    <?php echo $__env->make('layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
     <div class="mypage-wrapper">
       <div class="row">
@@ -85,15 +85,15 @@
 
         <div class="col-md-9 col-lg-9 col-sm-9 col-xs-12  my-page-main-content">
           <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 d-flex-around">
-            <a href="{{url('/my-page')}}" class="mypage-menu">口座サマリー</a>
-            <a href="{{url('/my-history')}}" class="mypage-menu ">履 歴</a>
-            <a href="{{url('/my-deposit')}}" class="mypage-menu mypage-menu-active">入出金</a>
+            <a href="<?php echo e(url('/my-page')); ?>" class="mypage-menu">口座サマリー</a>
+            <a href="<?php echo e(url('/my-history')); ?>" class="mypage-menu ">履 歴</a>
+            <a href="<?php echo e(url('/my-deposit')); ?>" class="mypage-menu mypage-menu-active">入出金</a>
           </div>
 
           <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 d-flex-around">
-            <a href="{{url('/my-transfer')}}" class="mypage-menu">資金移動</a>
-            <a href="{{url('/my-additional')}}" class="mypage-menu">追加口座</a>
-            <a href="{{url('/my-setting')}}" class="mypage-menu">設 定</a>
+            <a href="<?php echo e(url('/my-transfer')); ?>" class="mypage-menu">資金移動</a>
+            <a href="<?php echo e(url('/my-additional')); ?>" class="mypage-menu">追加口座</a>
+            <a href="<?php echo e(url('/my-setting')); ?>" class="mypage-menu">設 定</a>
           </div>
         </div>
       </div>
@@ -101,20 +101,20 @@
       <div style="height: 1px; background: gray; margin: 20px 0px"></div>
 
       <div class="row">
-        @include('my_page.my-page-side-bar')
+        <?php echo $__env->make('my_page.my-page-side-bar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <div class="col-md-9 col-lg-9 col-sm-9 col-xs-12  my-page-main-content">
 
           <div class="deposit-menu-wrapper ">
             <div class="col-md-2 col-lg-2 col-sm-4 col-xs-4 d-flex-around margin-top-zero">
-              <a href="{{url('/my-deposit')}}" class="mypage-menu deposit-menu mypage-menu-active">銀行入金</a>
+              <a href="<?php echo e(url('/my-deposit')); ?>" class="mypage-menu deposit-menu mypage-menu-active">銀行入金</a>
             </div>
 
             <div class="col-md-2 col-lg-2 col-sm-4 col-xs-4 d-flex-around margin-top-zero">
-              <a href="{{url('/my-deposit/cryptocurrency')}}" class="mypage-menu deposit-menu">暗号通貨入金</a>
+              <a href="<?php echo e(url('/my-deposit/cryptocurrency')); ?>" class="mypage-menu deposit-menu">暗号通貨入金</a>
             </div>
 
             <div class="col-md-2 col-lg-2 col-sm-4 col-xs-4 d-flex-around margin-top-zero">
-              <a href="{{url('/my-deposit/withdrawal')}}" class="mypage-menu deposit-menu">出　金</a>
+              <a href="<?php echo e(url('/my-deposit/withdrawal')); ?>" class="mypage-menu deposit-menu">出　金</a>
             </div>
           </div>
 
@@ -157,8 +157,8 @@
         </div>
       </div>
     </div>
-    @include('layouts.footer')
+    <?php echo $__env->make('layouts.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
   </div>
 </body>
 
-</html>
+</html><?php /**PATH E:\Gitub project\good\resources\views/my_page/deposit.blade.php ENDPATH**/ ?>

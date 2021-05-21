@@ -20,4 +20,4 @@
             <option value="">選択して下さい</option>
         </select>
     </div>
-</div>
+</div><?php /**PATH E:\Gitub project\good\resources\views/registerlayout/platform_currency.blade.php ENDPATH**/ ?>

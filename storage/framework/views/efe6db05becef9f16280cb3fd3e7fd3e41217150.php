@@ -143,4 +143,4 @@
     <div class="col-md-10 mb-10">
         <input class="form-control form-md" type="text" name="company[email]" />
     </div>
-</div>
+</div><?php /**PATH E:\Gitub project\good\resources\views/registerlayout/corporate_basic.blade.php ENDPATH**/ ?>

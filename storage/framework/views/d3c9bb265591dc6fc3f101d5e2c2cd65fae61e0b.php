@@ -14,16 +14,16 @@
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 	<!-- 全体 -->
-	<link rel="stylesheet" href="{{asset('css/basic.css')}}">
-	<link rel="stylesheet" href="{{asset('css/header_and_footer.css')}}">
+	<link rel="stylesheet" href="<?php echo e(asset('css/basic.css')); ?>">
+	<link rel="stylesheet" href="<?php echo e(asset('css/header_and_footer.css')); ?>">
 
 	<!-- 会員ページ全体 -->
-	<link rel="stylesheet" href="{{asset('css/left_profile.css')}}">
-	<link rel="stylesheet" href="{{asset('css/over_menu.css')}}">
+	<link rel="stylesheet" href="<?php echo e(asset('css/left_profile.css')); ?>">
+	<link rel="stylesheet" href="<?php echo e(asset('css/over_menu.css')); ?>">
 
 	<!-- 本ページ -->
-	<link rel="stylesheet" href="{{asset('css/summary.css')}}">
-	<link rel="stylesheet" href="{{asset('css/summary_main.css')}}">
+	<link rel="stylesheet" href="<?php echo e(asset('css/summary.css')); ?>">
+	<link rel="stylesheet" href="<?php echo e(asset('css/summary_main.css')); ?>">
 
 	<title>
 		GOOD ENOUGH FX
@@ -71,7 +71,7 @@
 			background: green;
 		}
 
-		@media screen and (max-width: 525px) {
+		@media  screen and (max-width: 525px) {
 			.form-md {
 				width: 100%;
 			}
@@ -86,7 +86,7 @@
 <body>
 
 	<div class="main-wrap">
-		@include('layouts.header')
+		<?php echo $__env->make('layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 		<div class="container">
 			<div class="row py-10">
@@ -100,13 +100,13 @@
 				<div class="col-md-4">
 
 					<div class="col-md-6 overmenu menu">
-						<a href="{{route('individual')}}">
+						<a href="<?php echo e(route('individual')); ?>">
 							個人口座
 						</a>
 					</div>
 
 					<div class="col-md-6 overmenu menu active">
-						<a href="{{route('corporate')}}">
+						<a href="<?php echo e(route('corporate')); ?>">
 							法人口座
 						</a>
 					</div>
@@ -114,8 +114,8 @@
 				</div>
 			</div>
 
-			<form method="POST" action="{{route('individual-confirm')}}" enctype="multipart/form-data" class="register_form">
-				@csrf
+			<form method="POST" action="<?php echo e(route('individual-confirm')); ?>" enctype="multipart/form-data" class="register_form">
+				<?php echo csrf_field(); ?>
 				<div class="row">
 					<div class="col-md-2">
 						<div class="text_right_box3">
@@ -123,7 +123,7 @@
 						</div>
 					</div>
 					<div class="col-md-10">
-						@include('registerlayout.platform_currency')
+						<?php echo $__env->make('registerlayout.platform_currency', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 					</div>
 
 				</div>
@@ -137,7 +137,7 @@
 					</div>
 
 					<div class="col-md-10">
-						@include('registerlayout.corporate_basic')
+						<?php echo $__env->make('registerlayout.corporate_basic', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 					</div>
 
 				</div>
@@ -151,7 +151,7 @@
 					</div>
 
 					<div class="col-md-10">
-						@include('registerlayout.personal_basic')
+						<?php echo $__env->make('registerlayout.personal_basic', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 					</div>
 
 				</div>
@@ -165,7 +165,7 @@
 					</div>
 
 					<div class="col-md-10">
-						@include('registerlayout.us_citizen')
+						<?php echo $__env->make('registerlayout.us_citizen', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 					</div>
 
 				</div>
@@ -179,16 +179,16 @@
 					</div>
 
 					<div class="col-md-10">
-						@include('registerlayout.finance_info')
+						<?php echo $__env->make('registerlayout.finance_info', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 					</div>
 				</div>
 				<input type="hidden" name="extra_information[ib_name]" value="">
 			</form>
 		</div>
 
-		@include('layouts.footer')
+		<?php echo $__env->make('layouts.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 	</div>
 
 </body>
 
-</html>
+</html><?php /**PATH E:\Gitub project\good\resources\views/corporate/register.blade.php ENDPATH**/ ?>
