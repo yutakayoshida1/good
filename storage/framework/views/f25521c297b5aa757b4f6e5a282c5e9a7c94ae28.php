@@ -70,13 +70,18 @@
 
     <div class="mypage-wrapper">
       <div class="row">
-        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12" style="padding-right: 5px">
+        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
           <div class="gradient-div gradient-div-main">
             メンバーページ
           </div>
         </div>
 
         <div class="col-md-9 col-lg-9 col-sm-9 col-xs-12 my-page-main-content">
+          <div class="aff-partner">
+            <div>
+              <a href="{{route('aff_partner')}}" class="btn">アフィリエイトパートナー登録</a>
+            </div>
+          </div>
           <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 d-flex-around">
             <a href="<?php echo e(url('/my-page')); ?>" class="mypage-menu">口座サマリー</a>
             <a href="<?php echo e(url('/my-history')); ?>" class="mypage-menu">履 歴</a>

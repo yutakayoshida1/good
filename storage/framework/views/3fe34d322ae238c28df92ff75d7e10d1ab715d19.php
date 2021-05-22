@@ -52,7 +52,7 @@
     GOOD ENOUGH FX
   </title>
   <style>
-    .my-page-button-red {
+    .my-page-button-red{
       border: none;
     }
 
@@ -63,32 +63,6 @@
       display: none;
     }
 
-    .mypage-detail-wrapper {
-      padding: 0 50px;
-    }
-
-    .card {
-      margin-top: 30px;
-      border: 1px solid #343F47;
-      border-radius: 5px;
-    }
-
-    .card-header {
-      background: linear-gradient(0.25turn, #0F141C, #343F47);
-      color: white;
-      padding: 15px;
-    }
-
-    .card-body {
-      padding: 15px;
-    }
-
-    .btn-success {
-      background: green;
-      border: none;
-      padding: 6px 30px;
-    }
-
     @media  screen and (max-width: 525px) {
       .red-div {
         margin-left: 0;
@@ -96,14 +70,6 @@
 
       .comment {
         display: block;
-      }
-
-      .mypage-detail-wrapper {
-        padding: 0;
-      }
-
-      .card-body {
-        padding: 0;
       }
     }
   </style>
@@ -116,7 +82,7 @@
 
     <div class="mypage-wrapper">
       <div class="row">
-        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12" style="padding-right: 5px">
           <div class="gradient-div gradient-div-main">
             メンバーページ
           </div>
@@ -147,54 +113,64 @@
         <div class="col-md-9 col-lg-9 col-sm-9 col-xs-12 my-page-main-content">
           <div class="mypage-detail-wrapper">
             <p class="title">
-              設定
+              2段階認証設定
             </p>
-            <div class="card">
-              <div class="card-header">MAM口座委託同意書</div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-3 col-xs-4" style="padding: 10px;">
-                    <img src="<?php echo e(asset('img/setting/doc.png')); ?>" alt="" style="width: 100%;">
-                  </div>
-                  <div class="col-md-9 col-xs-8" style="padding: 10px;">
-                    <p>
-                      MAM口座承認をご希望の方は、下記「申請する」ボタンをクリックし、<br>
-                      ・GOOD ENOUGH FXでの口座番号 <br>
-                      ・使用されているメールアドレス <br>
-                      ・お名前（ローマ字で）<br>
-                      をご記入頂き登録を完了させてください。
-                    </p>
-                    <div>
-                      <a href="<?php echo e(route('setting_mam')); ?>" class="btn btn-success">申請する</a>
-                    </div>
-                  </div>
+
+            <p class="content">
+              GOOD ENOUGH FXにログインするたびに、ユーザー名とパスワードに加えて、スマートフォンの<br>
+              Google認証システムアプリによって生成されたコードも必要になります。<br>
+              ログインするには動的コードを入力する必要があります。<br>
+              これにより、アカウントのパスワードが漏洩した場合のアカウントへの侵入を効果的に防ぐことができます。
+            </p>
+
+            <form method="post" onSubmit="return IdAuth(1);" action="<?php echo e(route('switchTwoFactorAuthenticate')); ?>">
+              <?php echo csrf_field(); ?>
+
+              <div class="row">
+                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-6" style="text-align: center; line-height:40px;">
+                  M4パスワード入力
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-6">
+                  <input type="text" class="my-page-input loginpassword1">
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+                  <input type="submit" value="アクティブ申請" class="my-page-button my-page-button-red">
                 </div>
               </div>
-            </div>
-            <div class="card">
-              <div class="card-header">２段階認証</div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-3 col-xs-4" style="padding: 10px;">
-                    <img src="<?php echo e(asset('img/setting/password.png')); ?>" alt="" style="width: 100%;">
-                  </div>
-                  <div class="col-md-9 col-xs-8" style="padding: 10px;">
-                    <p>
-                      ２段階認証使用方法：<br>
-                      TASNIC CAPITAL会員サイトにログインするたびに、ユーザー名と<br>
-                      パスワードに加えて、スマートフォンのGoogle認証システムアプリ<br>
-                      によって生成されたコードも必要になります。ログインするには<br>
-                      認証コードを入力する必要があります。これにより、アカウントの<br>
-                      パスワードが漏洩した場合のアカウントへの侵入を効果的に防ぐ<br>
-                      ことができます。
-                    </p>
-                    <div>
-                      <a href="<?php echo e(route('setting1')); ?>" class="btn btn-success">Activate</a>
-                    </div>
-                  </div>
+
+              <input type="hidden" value="1" name="isActivate">
+
+            </form>
+
+            <form method="post" onSubmit="return IdAuth(2);" action="<?php echo e(route('switchTwoFactorAuthenticate')); ?>">
+              <?php echo csrf_field(); ?>
+
+              <div class="row" style="margin-top: 20px">
+                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-6" style="text-align: center; line-height:40px;">
+                  M4パスワード入力
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-6">
+                  <input type="text" class="my-page-input loginpassword2">
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+                  <input type="submit" value="非アクティブ申請" class="my-page-button my-page-button-red">
                 </div>
               </div>
+
+              <input type="hidden" value="0" name="isActivate">
+
+            </form>
+
+            <div class="row">
+              <div class="col-md-12 text-center pad_vertical">
+                <span class="error-message" style="color: red"></span>
+              </div>
             </div>
+
+            <center style="margin-top:60px;">
+              <iframe src='<?php echo e($google2fa_url); ?>/showQR.php?user=<?php echo e($username); ?>&secret=<?php echo e($google2fa_secret); ?>' width='240' height='240' style="border: none;"></iframe>
+            </center>
+
           </div>
         </div>
       </div>
@@ -203,4 +179,4 @@
   </div>
 </body>
 
-</html><?php /**PATH E:\Gitub project\good\resources\views/my_page/setting.blade.php ENDPATH**/ ?>
+</html><?php /**PATH E:\Gitub project\good\resources\views/my_page/setting1.blade.php ENDPATH**/ ?>

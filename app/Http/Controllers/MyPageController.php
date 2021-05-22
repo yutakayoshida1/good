@@ -74,6 +74,52 @@ class MyPageController extends Controller
         return view('my_page.setting')->with($data);
     }
 
+    public function setting1(Request $request) {
+        if(!Auth::check()) return redirect(route('mt4login'));
+
+        $google2fa_url = asset('GoogleAuthenticator');
+        $username = Auth::user()->name;
+        $google2fa_secret = Auth::user()->google2fa_secret;
+        
+        $data = self::Setting2($request);
+        $data["google2fa_url"] = $google2fa_url;
+        $data["username"] = $username;
+        $data["google2fa_secret"] = $google2fa_secret;
+        
+        return view('my_page.setting1')->with($data);
+    }
+
+    public function setting_mam()
+    {
+        return view('my_page.setting_mam');
+    }
+
+    public function mam_success()
+    {
+        return view('my_page.success.mam');
+    }
+
+
+    public function aff_partner()
+    {
+        return view('my_page.aff_partner');
+    }
+
+    public function aff_spec_partner()
+    {
+        return view('my_page.aff_spec_partner');
+    }
+
+    public function aff_success()
+    {
+        return view('my_page.success.aff');
+    }
+
+    public function aff_spec_success()
+    {
+        return view('my_page.success.aff_spec');
+    }
+
     public function depositCryptocurrency(Request $request) {
         if(!Auth::check()) return redirect(route('mt4login'));
         
@@ -109,6 +155,7 @@ class MyPageController extends Controller
         
         return view('my_page.deposit_withdrawal_credit')->with($data);
     }
+
 
 
 
