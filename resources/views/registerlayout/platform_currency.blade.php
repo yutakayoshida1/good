@@ -11,7 +11,7 @@
 
 <div class="row mb-10">
     <div class="col-md-2 ">
-        <div class="text_right_box3" style="margin-left:-1px;">
+        <div class="text_right_box3">
             取引プラットフォーム:
         </div>  
     </div>
