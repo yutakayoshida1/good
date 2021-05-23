@@ -117,7 +117,10 @@
 					下記の情報の記載をお願い致します。
 				</p>
 				<div class="consent">
-					<div class="black-div"></div>
+					<div class="black-div" style="position: relative;">
+						<div style="position: absolute; height:2px; background: green;top:5px;width:100%;">
+						</div>
+					</div>
 					<div class="consent-main">
 						<div class="row" style="margin-top: 20px;">
 							<div class="col-md-2 form-label">登録名</div>
@@ -141,7 +144,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="black-div"></div>
+					<div class="black-div" style="position: relative;">
+						<div style="position: absolute; height:2px; background: green;bottom:5px;width:100%;">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
