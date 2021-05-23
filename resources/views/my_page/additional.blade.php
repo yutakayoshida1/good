@@ -122,6 +122,18 @@
               </div>
 
               <div class="row" style="margin-top:20px;">
+                <div class="col-xs-5 form-label">取引プラットフォーム:</div>
+                <div class="col-xs-7" style="line-height: 40px;">
+                  <select name="basic_information[platform]" class="form-input" required>
+                    <option value="" selected disabled>選択してください</option>
+                    <option value="メタトレーダー4">メタトレーダー 4</option>
+                    <option value="アフィリエイト">(代理店様用)アフィリエイト専用口座</option>
+                    <option value="MAM口座">MAM口座</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row" style="margin-top:20px;">
                 <div class="col-xs-5 form-label">レバレッジ</div>
                 <div class="col-xs-7" style="line-height: 40px;">
                   <select name="" class="form-input">
