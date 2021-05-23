@@ -1,1 +1,0 @@
-個人設定<?php /**PATH /Applications/MAMP/htdocs/GoodEnough3/resources/views/registerlayout/personal_basic.blade.php ENDPATH**/ ?>
