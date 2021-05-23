@@ -1,6 +1,7 @@
 <div class="row mb-10">
     <div class="col-md-2">
         <div class="text_right_box3">
+            <span style="color: red;">*</span>
             口座通貨
         </div>
     </div>
@@ -11,9 +12,10 @@
 
 <div class="row mb-10">
     <div class="col-md-2 ">
-        <div class="text_right_box3" style="margin-left:-1px;">
+        <div class="text_right_box3">
+            <span style="color: red;">*</span>
             取引プラットフォーム:
-        </div>  
+        </div>
     </div>
     <div class="col-md-10">
         <select class="form-control form-md" name="basic_information[platform]" required>
@@ -28,6 +30,7 @@
 <div class="row mb-10">
     <div class="col-md-2 ">
         <div class="text_right_box3">
+            <span style="color: red;">*</span>
             レバレッジ
         </div>
     </div>

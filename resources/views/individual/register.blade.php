@@ -32,20 +32,24 @@
 		.pb-10 {
 			padding-bottom: 10px !important;
 		}
+
 		.pt-10 {
 			padding-top: 10px !important;
 		}
-		.py-10{
+
+		.py-10 {
 			padding: 10px 0 !important;
 		}
 
-		.mt-10{
+		.mt-10 {
 			margin-top: 10px !important;
 		}
-		.mb-10{
+
+		.mb-10 {
 			margin-bottom: 10px !important;
 		}
-		.my-10{
+
+		.my-10 {
 			margin: 10px 0 !important;
 		}
 

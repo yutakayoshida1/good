@@ -1,6 +1,7 @@
 <div class="row">
     <div class="col-md-2">
         <div class="text_right_box3">
+            <span style="color: red;">*</span>
             お名前
         </div>
     </div>
@@ -12,6 +13,7 @@
 <div class="row">
     <div class="col-md-2">
         <div class="text_right_box3">
+            <span style="color: red;">*</span>
             法人形態
         </div>
     </div>
@@ -23,6 +25,7 @@
 <div class="row mb-10">
     <div class="col-md-2">
         <div class="text_right_box3">
+            <span style="color: red;">*</span>
             設立日
         </div>
     </div>
@@ -70,6 +73,7 @@
 <div class="row">
     <div class="col-md-2">
         <div class="text_right_box3">
+            <span style="color: red;">*</span>
             登録国
         </div>
     </div>
@@ -85,6 +89,7 @@
 <div class="row">
     <div class="col-md-2">
         <div class="text_right_box3">
+            <span style="color: red;">*</span>
             住所
         </div>
     </div>
@@ -126,6 +131,7 @@
 <div class="row">
     <div class="col-md-2">
         <div class="text_right_box3">
+            <span style="color: red;">*</span>
             電話番号
         </div>
     </div>
@@ -137,6 +143,7 @@
 <div class="row">
     <div class="col-md-2">
         <div class="text_right_box3">
+            <span style="color: red;">*</span>
             メールアドレス
         </div>
     </div>

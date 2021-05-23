@@ -1,6 +1,7 @@
 <div class="row mb-10">
     <div class="col-md-2 mb-10">
         <div class="text_right_box3">
+            <span style="color: red;">*</span>
             お名前
         </div>
     </div>
@@ -23,6 +24,7 @@
 <div class="row">
     <div class="col-md-2">
         <div class="text_right_box3">
+            <span style="color: red;">*</span>
             身分証番号 <br>
             (パスポート 免許等)
         </div>
@@ -35,6 +37,7 @@
 <div class="row mb-10">
     <div class="col-md-2">
         <div class="text_right_box3">
+            <span style="color: red;">*</span>
             身分証の有効期限
         </div>
     </div>
@@ -81,6 +84,7 @@
 <div class="row mb-10">
     <div class="col-md-2">
         <div class="text_right_box3">
+            <span style="color: red;">*</span>
             生年月日
         </div>
     </div>
@@ -129,6 +133,7 @@
 <div class="row">
     <div class="col-md-2">
         <div class="text_right_box3">
+            <span style="color: red;">*</span>
             国籍
         </div>
     </div>
@@ -142,6 +147,7 @@
 <div class="row">
     <div class="col-md-2">
         <div class="text_right_box3">
+            <span style="color: red;">*</span>
             お住まい
         </div>
     </div>
@@ -182,6 +188,7 @@
 <div class="row">
     <div class="col-md-2">
         <div class="text_right_box3">
+            <span style="color: red;">*</span>
             電話番号
         </div>
     </div>
@@ -193,6 +200,7 @@
 <div class="row">
     <div class="col-md-2">
         <div class="text_right_box3">
+            <span style="color: red;">*</span>
             メールアドレス
         </div>
     </div>
