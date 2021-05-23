@@ -125,7 +125,7 @@
         <div class="col-md-9 col-lg-9 col-sm-9 col-xs-12 my-page-main-content">
           <div class="aff-partner">
             <div>
-              <a href="{{route('aff_partner')}}" class="btn">アフィリエイトパートナー登録</a>
+              <a href="<?php echo e(route('aff_partner')); ?>" class="btn">アフィリエイトパートナー登録</a>
             </div>
           </div>
           <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 d-flex-around">

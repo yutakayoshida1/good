@@ -1,19 +1,18 @@
 @if($row[0] == "ログイン")
 
 <div class="col-md-{{$row[2]}} menu active pad_vertical2 textcenter">
-	<a href="{{$row[1]}}" class="login-button" href="{{$row[1]}}">
-		<span class="login-button-text">
+	<a href="{{$row[1]}}" class="@auth logout-button @else login-button @endauth" href="{{$row[1]}}">
+		<span class="@auth logout-button-text @else login-button-text @endauth">
 			{{$row[0]}}
 		</span>
-	</a>	
+	</a>
 </div>
 
 @elseif($row[0] == "ログアウト")
 
-
 <div class="col-md-{{$row[2]}} menu active pad_vertical2 textcenter">
-	<a href="{{$row[1]}}" class="logout-button" href="{{$row[1]}}">
-		<span class="logout-button-text">
+	<a href="{{$row[1]}}" class="@auth login-button @else logout-button @endauth" href="{{$row[1]}}">
+		<span class="@auth login-button-text @else logout-button-text @endauth">
 			{{$row[0]}}
 		</span>
 	</a>

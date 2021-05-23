@@ -1,20 +1,19 @@
 <?php if($row[0] == "ログイン"): ?>
 
 <div class="col-md-<?php echo e($row[2]); ?> menu active pad_vertical2 textcenter">
-	<a href="<?php echo e($row[1]); ?>" class="login-button" href="<?php echo e($row[1]); ?>">
-		<span class="login-button-text">
+	<a href="<?php echo e($row[1]); ?>" class="<?php if(auth()->guard()->check()): ?> logout-button <?php else: ?> login-button <?php endif; ?>" href="<?php echo e($row[1]); ?>">
+		<span class="<?php if(auth()->guard()->check()): ?> logout-button-text <?php else: ?> login-button-text <?php endif; ?>">
 			<?php echo e($row[0]); ?>
 
 		</span>
-	</a>	
+	</a>
 </div>
 
 <?php elseif($row[0] == "ログアウト"): ?>
 
-
 <div class="col-md-<?php echo e($row[2]); ?> menu active pad_vertical2 textcenter">
-	<a href="<?php echo e($row[1]); ?>" class="logout-button" href="<?php echo e($row[1]); ?>">
-		<span class="logout-button-text">
+	<a href="<?php echo e($row[1]); ?>" class="<?php if(auth()->guard()->check()): ?> login-button <?php else: ?> logout-button <?php endif; ?>" href="<?php echo e($row[1]); ?>">
+		<span class="<?php if(auth()->guard()->check()): ?> login-button-text <?php else: ?> logout-button-text <?php endif; ?>">
 			<?php echo e($row[0]); ?>
 
 		</span>
