@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use  Illuminate\Support\Facades\App;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/local/{locale}', 'LangController@index');
 
 Route::get('/', 'TopController@index')->name('top');
 
@@ -45,26 +48,26 @@ Route::post('/mt4login-confirm', 'Mt4LoginController@postIndex')->name('mt4login
 Route::get('/password-reset', 'Mt4LoginController@passwordReset')->name('password-reset');
 
 // 
-Route::get('/my-page' , 'MyPageController@index')->name('my-page');
-Route::get('/my-history' , 'MyPageController@history');
-Route::get('/my-deposit' , 'MyPageController@deposit');
-Route::get('/my-transfer' , 'MyPageController@transfer');
-Route::get('/my-additional' , 'MyPageController@additional');
-Route::get('/my-setting' , 'MyPageController@setting')->name('setting2');
-Route::get('/my-setting/two' , 'MyPageController@setting1')->name('setting1');
-Route::get('/my-setting/mam' , 'MyPageController@setting_mam')->name('setting_mam');
-Route::get('/my-setting/mam/success' , 'MyPageController@mam_success')->name('mam.success');
+Route::get('/my-page', 'MyPageController@index')->name('my-page');
+Route::get('/my-history', 'MyPageController@history');
+Route::get('/my-deposit', 'MyPageController@deposit');
+Route::get('/my-transfer', 'MyPageController@transfer');
+Route::get('/my-additional', 'MyPageController@additional');
+Route::get('/my-setting', 'MyPageController@setting')->name('setting2');
+Route::get('/my-setting/two', 'MyPageController@setting1')->name('setting1');
+Route::get('/my-setting/mam', 'MyPageController@setting_mam')->name('setting_mam');
+Route::get('/my-setting/mam/success', 'MyPageController@mam_success')->name('mam.success');
 
-Route::get('/my-deposit/credit' , 'MyPageController@depositCredit');
-Route::get('/my-deposit/cryptocurrency' , 'MyPageController@depositCryptocurrency');
-Route::get('/my-deposit/withdrawal' , 'MyPageController@depositWithdrawal')->name('depositWithdrawal');
+Route::get('/my-deposit/credit', 'MyPageController@depositCredit');
+Route::get('/my-deposit/cryptocurrency', 'MyPageController@depositCryptocurrency');
+Route::get('/my-deposit/withdrawal', 'MyPageController@depositWithdrawal')->name('depositWithdrawal');
 
-Route::get('/my-deposit/withdrawal/credit' , 'MyPageController@depositWithdrawalViaCredit');
+Route::get('/my-deposit/withdrawal/credit', 'MyPageController@depositWithdrawalViaCredit');
 
-Route::get('/my-page/aff_partner' , 'MyPageController@aff_partner')->name('aff_partner');
-Route::get('/my-page/aff_spec_partner' , 'MyPageController@aff_spec_partner')->name('aff_spec_partner');
-Route::get('/my-page/aff_success' , 'MyPageController@aff_success')->name('aff_success');
-Route::get('/my-page/aff_spec_success' , 'MyPageController@aff_spec_success')->name('aff_spec_success');
+Route::get('/my-page/aff_partner', 'MyPageController@aff_partner')->name('aff_partner');
+Route::get('/my-page/aff_spec_partner', 'MyPageController@aff_spec_partner')->name('aff_spec_partner');
+Route::get('/my-page/aff_success', 'MyPageController@aff_success')->name('aff_success');
+Route::get('/my-page/aff_spec_success', 'MyPageController@aff_spec_success')->name('aff_spec_success');
 
 // 
 

@@ -94,17 +94,11 @@
         </div>
     </div>
     <div class="col-md-10">
-        <div class="col-md-3 form-label">
-            <span class="form-label">都道府県</span>
+        <div class="col-md-4 mb-10 form-md-l">
+            <input class="form-control" type="text" name="company[address1]" placeholder="都道府県" />
         </div>
-        <div class="col-md-3 mb-10">
-            <input class="form-control form-md" type="text" name="company[address1]" />
-        </div>
-        <div class="col-md-3 form-label">
-            <span class="form-label">市区町村 (ローマ字)</span>
-        </div>
-        <div class="col-md-3 mb-10">
-            <input class="form-control form-md" type="text" name="company[address2]" />
+        <div class="col-md-4 mb-10 form-md-l">
+            <input class="form-control" type="text" name="company[address2]" placeholder="市区町村 (ローマ字)" />
         </div>
     </div>
 </div>
@@ -113,17 +107,11 @@
     <div class="col-md-2">
     </div>
     <div class="col-md-10">
-        <div class="col-md-3 form-label">
-            <span class="form-label"> 番地</span>
+        <div class="col-md-4 mb-10 form-md-l">
+            <input class="form-control" type="text" name="company[address3]" placeholder="番地" />
         </div>
-        <div class="col-md-3 mb-10">
-            <input class="form-control form-md" type="text" name="company[address3]" />
-        </div>
-        <div class="col-md-3 form-label">
-            <span class="form-label">郵便番号</span>
-        </div>
-        <div class="col-md-3 mb-10">
-            <input class="form-control form-md" type="text" name="company[address4]" />
+        <div class="col-md-4 mb-10 form-md-l">
+            <input class="form-control" type="text" name="company[address4]" placeholder="郵便番号" />
         </div>
     </div>
 </div>

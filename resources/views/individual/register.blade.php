@@ -62,8 +62,16 @@
 			margin-left: 0px;
 		}
 
+		.form-md-l {
+			margin-right: 10px;
+		}
+
+		.form-md-l input {
+			margin-left: 0px;
+		}
+
 		.form-sm {
-			padding: 0 10px !important;
+			margin-right: 10px;
 		}
 
 		.form-label {
@@ -78,6 +86,15 @@
 		@media screen and (max-width: 525px) {
 			.form-md {
 				width: 100%;
+			}
+
+			.form-sm {
+				margin-right: 0px;
+				padding: 5px !important;
+			}
+
+			.form-md-l {
+				margin-right: 0;
 			}
 
 			.form-label {

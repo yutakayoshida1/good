@@ -404,7 +404,7 @@
     position: relative;
     margin-top: -15%;
     margin-bottom: 0;
-    width: 110%;
+    width: 122%;
   }
   
   #download-button {
@@ -546,7 +546,7 @@
   .bg-image .banner-logo {
     display: flex;
     margin: auto;
-    margin-top: 20%;
+    margin-top: 14%;
   }
 
   .bg-image .title-bg {

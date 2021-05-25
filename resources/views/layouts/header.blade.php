@@ -33,84 +33,121 @@
 		<div class="col-md-1 textcenter2 pad_vertical">
 			<a href="{{url('/')}}"><img src="{{asset('img/basic/logo.png')}}" class="logo"></a>
 		</div>
-
 		<div class="col-md-10 textcenter header_menu">
 			<div class="col-md-6 textcenter">
-				@foreach($global->header_table_body as $row)
-				@include('layouts.header_eachmenu')
-				@endforeach
+				<div class="col-md-2 menu active pad_vertical2">
+					<a href="/top">
+						{{ trans('header.menu_top')}}
+					</a>
+				</div>
+				<div class="col-md-3 menu active pad_vertical2">
+					<a href="/individual">
+						{{ trans('header.menu_new_account')}}
+					</a>
+				</div>
+				<div class="col-md-3 menu active pad_vertical2">
+					<a href="/demo">
+						{{ trans('header.menu_demo')}}
+					</a>
+				</div>
+				<div class="col-md-4 menu active pad_vertical2">
+					<a href="/top#annai">
+						{{ trans('header.menu_info')}}
+					</a>
+				</div>
 			</div>
-
 			<div class="col-md-6 textcenter">
-				@foreach($global->header_table_body2 as $row)
-				@include('layouts.header_eachmenu')
-				@endforeach
+				<div class="col-md-3 menu active pad_vertical2">
+					<a href="/top#osirase">
+						{{ trans('header.menu_notice')}}
+					</a>
+				</div>
+				<div class="col-md-3 menu active pad_vertical2">
+					<a href="/faq">
+						{{ trans('header.menu_faq')}}
+					</a>
+				</div>
+				<div class="col-md-3 menu active pad_vertical2 textcenter">
+					<a href="/mt4login" class="@auth logout-button @else login-button @endauth">
+						<span class="@auth logout-button-text @else login-button-text @endauth">
+							{{ trans('header.menu_login')}}
+						</span>
+					</a>
+				</div>
+				<div class="col-md-3 menu active pad_vertical2 textcenter">
+					<a href="/mt4logout" class="@auth login-button @else logout-button @endauth">
+						<span class="@auth login-button-text @else logout-button-text @endauth">
+							{{ trans('header.menu_logout')}}
+						</span>
+					</a>
+				</div>
 			</div>
 		</div>
 
 		<div class="col-md-1 textcenter header_menu">
-			<button class="btn btn-language dropdown-toggle" type="button" data-toggle="dropdown">Language
+			<button class="btn btn-language dropdown-toggle" type="button" data-toggle="dropdown">
+				{{ trans('header.menu_lang')}}
 				<span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu" style="min-width: fit-content; right:0;">
 				<li>
-					<a href="#">
+					<a href="/local/jp">
 						<span><img src="{{asset('img/flag/jp.png')}}" alt="" class="flag"></span>
-						<span class="language-letter">日本語</span>
+						<span class="language-letter">{{ trans('header.lang_jp')}}</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="/local/en">
 						<span><img src="{{asset('img/flag/uk.png')}}" alt="" class="flag"></span>
-						<span class="language-letter">英語</span>
+						<span class="language-letter">{{ trans('header.lang_en')}}</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="/local/es">
 						<span><img src="{{asset('img/flag/sp.png')}}" alt="" class="flag"></span>
-						<span class="language-letter">スペイン語</span>
+						<span class="language-letter">{{ trans('header.lang_es')}}</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="/local/cn">
 						<span><img src="{{asset('img/flag/cn.png')}}" alt="" class="flag"></span>
-						<span class="language-letter">中国語</span>
+						<span class="language-letter">{{ trans('header.lang_cn')}}</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="/local/sa">
 						<span><img src="{{asset('img/flag/sa.png')}}" alt="" class="flag"></span>
-						<span class="language-letter">アラビア語</span>
+						<span class="language-letter">{{ trans('header.lang_sa')}}</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="/local/ru">
 						<span><img src="{{asset('img/flag/ru.png')}}" alt="" class="flag"></span>
-						<span class="language-letter">ロシア語</span>
+						<span class="language-letter">{{ trans('header.lang_ru')}}</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="/local/fr">
 						<span><img src="{{asset('img/flag/fr.png')}}" alt="" class="flag"></span>
-						<span class="language-letter">フランス語</span>
+						<span class="language-letter">{{ trans('header.lang_fr')}}</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="/local/it">
 						<span><img src="{{asset('img/flag/it.png')}}" alt="" class="flag"></span>
-						<span class="language-letter">イタリア語</span>
+						<span class="language-letter">{{ trans('header.lang_it')}}</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="/local/kr">
 						<span><img src="{{asset('img/flag/kr.png')}}" alt="" class="flag"></span>
-						<span class="language-letter">韓国語</span>
+						<span class="language-letter">{{ trans('header.lang_kr')}}</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="/local/po">
 						<span><img src="{{asset('img/flag/po.png')}}" alt="" class="flag"></span>
-						<span class="language-letter">ポルトガル語</span>
+						<span class="language-letter">{{ trans('header.lang_po')}}</span>
 					</a>
 				</li>
 			</ul>
@@ -221,7 +258,7 @@
 						<span class="language-letter">ポルトガル語</span>
 					</a>
 				</div>
-			</div>	
+			</div>
 		</div>
 	</div>
 </div>

@@ -6,17 +6,11 @@
         </div>
     </div>
     <div class="col-md-10">
-        <div class="col-md-3 form-label">
-            姓(ローマ字)
+        <div class="col-md-4 mb-10 form-md-l">
+            <input class="form-control" type="text" name="primary_holder[last_name]" placeholder="姓(ローマ字)"/>
         </div>
-        <div class="col-md-3 mb-10">
-            <input class="form-control form-md" type="text" name="primary_holder[last_name]" />
-        </div>
-        <div class="col-md-3 form-label">
-            名(ローマ字)
-        </div>
-        <div class="col-md-3 mb-10">
-            <input class="form-control form-md" type="text" name="primary_holder[first_name]" />
+        <div class="col-md-4 mb-10 form-md-l">
+            <input class="form-control" type="text" name="primary_holder[first_name]" placeholder="名(ローマ字)"/>
         </div>
     </div>
 </div>
@@ -152,17 +146,11 @@
         </div>
     </div>
     <div class="col-md-10">
-        <div class="col-md-3 form-label">
-            都道府県
+        <div class="col-md-4 mb-10 form-md-l">
+            <input class="form-control" type="text" name="primary_holder[last_name]" placeholder="都道府県" />
         </div>
-        <div class="col-md-3 mb-10">
-            <input class="form-control form-md" type="text" name="primary_holder[last_name]" />
-        </div>
-        <div class="col-md-3 form-label">
-            市区町村 (ローマ字)
-        </div>
-        <div class="col-md-3 mb-10">
-            <input class="form-control form-md" type="text" name="primary_holder[first_name]" />
+        <div class="col-md-4 mb-10 form-md-l">
+            <input class="form-control" type="text" name="primary_holder[first_name]" placeholder="市区町村 (ローマ字)" />
         </div>
     </div>
 </div>
@@ -171,17 +159,11 @@
     <div class="col-md-2">
     </div>
     <div class="col-md-10">
-        <div class="col-md-3 form-label">
-            番地
+        <div class="col-md-4 mb-10 form-md-l">
+            <input class="form-control" type="text" name="primary_holder[last_name]" placeholder="番地" />
         </div>
-        <div class="col-md-3 mb-10">
-            <input class="form-control form-md" type="text" name="primary_holder[last_name]" />
-        </div>
-        <div class="col-md-3 form-label">
-            郵便番号
-        </div>
-        <div class="col-md-3 mb-10">
-            <input class="form-control form-md" type="text" name="primary_holder[first_name]" />
+        <div class="col-md-4 mb-10 form-md-l">
+            <input class="form-control" type="text" name="primary_holder[first_name]" placeholder="郵便番号" />
         </div>
     </div>
 </div>

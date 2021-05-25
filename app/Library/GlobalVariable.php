@@ -20,33 +20,30 @@ class GlobalVariable
         $table_body = [];
 
        
-
         $table_body2 = [];
-        $table_body2[] = 'TOP';
+        $table_body2[] = trans('header.menu_top');
         $table_body2[] = route('top');
         $table_body2[] = "2";
         $table_body[] = $table_body2;
 
         $table_body2 = [];
-        $table_body2[] = '新規口座開設';
+        $table_body2[] = trans('header.menu_new_account');
         $table_body2[] = route('individual');
         $table_body2[] = "3";
         $table_body[] = $table_body2;
 
         $table_body2 = [];
-        $table_body2[] = 'デモ口座開設';
+        $table_body2[] = trans('header.menu_demo');
         $table_body2[] = route('demo');
         $table_body2[] = "3";
         $table_body[] = $table_body2;
 
         $table_body2 = [];
-        $table_body2[] = 'GOOD ENOUGH FX 案内';
+        $table_body2[] = trans('header.menu_info');
         $table_body2[] = route('top')."#annai";
         $table_body2[] = "4";
         $table_body[] = $table_body2;
         
-        
-
         return $table_body;
     }
 
@@ -55,25 +52,25 @@ class GlobalVariable
         $table_body = [];
         
         $table_body2 = [];
-        $table_body2[] = 'お知らせ';
+        $table_body2[] = trans('header.menu_notice');
         $table_body2[] = route('top')."#osirase";
         $table_body2[] = "3";
         $table_body[] = $table_body2;
 
         $table_body2 = [];
-        $table_body2[] = 'よくある質問';
+        $table_body2[] = trans('header.menu_faq');
         $table_body2[] = route('faq');
         $table_body2[] = "3";
         $table_body[] = $table_body2;
 
         $table_body2 = [];
-        $table_body2[] = 'ログイン';
+        $table_body2[] = trans('header.menu_login');
         $table_body2[] = route('mt4login');
         $table_body2[] = "3";
         $table_body[] = $table_body2;
 
         $table_body2 = [];
-        $table_body2[] = 'ログアウト';
+        $table_body2[] = trans('header.menu_logout');
         $table_body2[] = route('mt4logout');
         $table_body2[] = "3";
         $table_body[] = $table_body2;
@@ -90,31 +87,31 @@ class GlobalVariable
         $table_body = [];
         
         $table_body2 = [];
-        $table_body2[] = '金融サービスガイド(FSG)';
+        $table_body2[] = trans('footer.footer_FSG');
         $table_body2[] = asset('images/GEFX FSG.pdf');
         $table_body2[] = "2";
         $table_body[] = $table_body2;
 
         $table_body2 = [];
-        $table_body2[] = '金融商品開示文書(PDS)';
+        $table_body2[] = trans('footer.footer_PDS');
         $table_body2[] = asset('images/GEFX PDS.pdf');
         $table_body2[] = "2";
         $table_body[] = $table_body2;
 
         $table_body2 = [];
-        $table_body2[] = '取引規約';
+        $table_body2[] = trans('footer.footer_transaction_tem');
         $table_body2[] = asset('images/GEFX Terms & conditions.pdf');
         $table_body2[] = "1";
         $table_body[] = $table_body2;
 
         $table_body2 = [];
-        $table_body2[] = 'ウェブサイト個人情報保護方針';
+        $table_body2[] = trans('footer.footer_policy');
         $table_body2[] = asset('images/GEFX WebsitePrivacyPolicy.pdf');
         $table_body2[] = "3";
         $table_body[] = $table_body2;
 
         $table_body2 = [];
-        $table_body2[] = 'ウェブサイト利用規約';
+        $table_body2[] = trans('footer.footer_term_use');
         $table_body2[] = asset('images/GEFX利用規約.pdf');
         $table_body2[] = "2";
         $table_body[] = $table_body2;
@@ -126,7 +123,7 @@ class GlobalVariable
         // $table_body[] = $table_body2;
 
         $table_body2 = [];
-        $table_body2[] = '会社概要';
+        $table_body2[] = trans('footer.footer_profile');
         $table_body2[] = route('aboutcompany');
         $table_body2[] = "1";
         $table_body[] = $table_body2;
